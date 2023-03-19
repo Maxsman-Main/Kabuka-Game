@@ -10,7 +10,7 @@ namespace Scriptable.Move
 
         public override void Move(Vector3 input, Rigidbody2D rigidbody)
         {
-            Vector2 newVelocity = new Vector2(input.x * movementSpeed, 0); 
+            Vector2 newVelocity = new Vector2(input.x * movementSpeed, rigidbody.velocity.y); 
             rigidbody.velocity = newVelocity;
         }
     }
